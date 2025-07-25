@@ -1,0 +1,25 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alvizen</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
+    form { margin-top: 30px; }
+    input, textarea { padding: 10px; margin: 10px; width: 300px; }
+    button { padding: 10px 20px; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Alvizen</h1>
+  <p>Leave your details and we'll get back to you!</p>
+
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="email" name="_replyto" placeholder="Your Email" required><br>
+    <textarea name="message" placeholder="Your Message" rows="4"></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>
