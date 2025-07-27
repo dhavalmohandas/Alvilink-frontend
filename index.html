@@ -1,25 +1,70 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Alvizen</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-    form { margin-top: 30px; }
-    input, textarea { padding: 10px; margin: 10px; width: 300px; }
-    button { padding: 10px 20px; }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2e00e7df3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <h1>Welcome to Alvizen</h1>
-  <p>Leave your details and we'll get back to you!</p>
 
-  <form action="https://formspree.io/f/your-form-id" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required><br>
-    <input type="email" name="_replyto" placeholder="Your Email" required><br>
-    <textarea name="message" placeholder="Your Message" rows="4"></textarea><br>
-    <button type="submit">Submit</button>
-  </form>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="overlay">
+      <h1>Alvizen</h1>
+      <p>Effortless customer service for growing businesses</p>
+    </div>
+  </section>
+
+  <!-- Illustration Section -->
+  <section class="illustration">
+    <img src="illustration.jpg" alt="Customer Support Illustration" class="intro-image" />
+  </section>
+
+  <!-- Intro Content -->
+  <section class="intro">
+    <p>
+      We support small and medium businesses with expert virtual assistants, meeting coordination, schedule management, and responsive chat support across WhatsApp, Instagram, and other platforms.
+    </p>
+    <p>Leave your details and we’ll reach out!</p>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="form-section">
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="firstname" placeholder="First Name" required />
+      <input type="text" name="lastname" placeholder="Last Name" required />
+      <input type="text" name="company" placeholder="Company" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-links">
+      <a href="#"><i class="fas fa-info-circle"></i> About Us</a>
+      <a href="#"><i class="fas fa-briefcase"></i> Careers</a>
+      <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+      <a href="#"><i class="fas fa-user-shield"></i> Privacy Policy</a>
+      <a href="#"><i class="fas fa-file-alt"></i> Terms of Service</a>
+    </div>
+    <p>&copy; 2025 Alvizen. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const form = document.querySelector("form");
+    const button = form.querySelector("button");
+
+    form.addEventListener("submit", () => {
+      button.disabled = true;
+      button.textContent = "Sending...";
+    });
+  </script>
+
 </body>
 </html>
